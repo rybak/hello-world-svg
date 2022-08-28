@@ -5,6 +5,8 @@ codes = []
 for c in 'Hello, world!':
     codes.append('{0:08b}'.format(ord(c)))
 
+margin_left = 10
+margin_top = 10
 radius = 8
 gap = 5
 stroke_width = 3
@@ -35,8 +37,8 @@ def vertical_stroke(cx, cy):
 
 for i, c in enumerate(codes):
     for j, d in enumerate(c):
-        x = gap + radius + j * (gap + 2 * radius)
-        y = gap + radius + i * (gap + 2 * radius)
+        x = margin_left + gap + radius + j * (gap + 2 * radius)
+        y = margin_top + gap + radius + i * (gap + 2 * radius)
         if d == '0':
             circle(x, y)
         if d == '1':
