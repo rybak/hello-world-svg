@@ -21,8 +21,23 @@ def circle(x, y):
        />""".format(stroke_width, x, y, radius, radius))
 
 
+def vertical_stroke(cx, cy):
+    x = cx
+    y = cy - radius
+    height = 2 * radius
+    print("""<rect
+   style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   width="1"
+   height="{}"
+   x="{}"
+   y="{}" />""".format(stroke_width, height, x, y))
+
+
 for i, c in enumerate(codes):
     for j, d in enumerate(c):
         x = gap + radius + j * (gap + 2 * radius)
         y = gap + radius + i * (gap + 2 * radius)
-        circle(x, y)
+        if d == '0':
+            circle(x, y)
+        if d == '1':
+            vertical_stroke(x, y)
