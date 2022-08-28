@@ -2,7 +2,8 @@
 
 codes = []
 
-for c in 'Hello, world!':
+text = 'Hello, world!'
+for c in text:
     codes.append('{0:08b}'.format(ord(c)))
 
 margin_left = 10
