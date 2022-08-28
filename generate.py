@@ -12,7 +12,7 @@ stroke_width = 3
 
 def circle(x, y):
     print("""<ellipse
-       style="fill:none;stroke:#fffffe;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#ffffff;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path817"
        cx="{}"
        cy="{}"
