@@ -22,4 +22,4 @@ for i, c in enumerate(codes):
            cy="{}"
            rx="{}"
            ry="{}"
-           inkscape:label="zero" />""".format(x, y, radius, radius))
+           />""".format(x, y, radius, radius))
