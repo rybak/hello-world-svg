@@ -6,8 +6,9 @@ text = 'Hello, world!'
 for c in text:
     codes.append('{0:08b}'.format(ord(c)))
 
-margin_left = 10
-margin_top = 10
+margin_left = 0
+margin_top = 0
+
 radius = 8
 gap = 5
 stroke_width = 3
