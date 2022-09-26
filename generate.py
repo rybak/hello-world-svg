@@ -32,7 +32,7 @@ def vertical_stroke(cx, cy):
     height = 2 * radius
     print("""<rect
    style="fill:none;fill-opacity:1;stroke:{};stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-   width="1"
+   width="0.000001"
    height="{}"
    x="{}"
    y="{}" />""".format(color, stroke_width, height, x, y))
