@@ -12,11 +12,12 @@ margin_top = 0
 radius = 8
 gap = 5
 stroke_width = 3
+color = '#ffffff'
 
 
 def circle(x, y):
     print("""<ellipse
-       style="fill:none;stroke:#ffffff;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:""" + color + """;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path817"
        cx="{}"
        cy="{}"
@@ -30,7 +31,7 @@ def vertical_stroke(cx, cy):
     y = cy - radius
     height = 2 * radius
     print("""<rect
-   style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:none;fill-opacity:1;stroke:""" + color + """;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    width="1"
    height="{}"
    x="{}"
