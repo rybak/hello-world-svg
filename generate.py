@@ -17,13 +17,13 @@ color = '#ffffff'
 
 def circle(x, y):
     print("""<ellipse
-       style="fill:none;stroke:""" + color + """;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:{};stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path817"
        cx="{}"
        cy="{}"
        rx="{}"
        ry="{}"
-       />""".format(stroke_width, x, y, radius, radius))
+       />""".format(color, stroke_width, x, y, radius, radius))
 
 
 def vertical_stroke(cx, cy):
@@ -31,11 +31,11 @@ def vertical_stroke(cx, cy):
     y = cy - radius
     height = 2 * radius
     print("""<rect
-   style="fill:none;fill-opacity:1;stroke:""" + color + """;stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:none;fill-opacity:1;stroke:{};stroke-width:{};stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    width="1"
    height="{}"
    x="{}"
-   y="{}" />""".format(stroke_width, height, x, y))
+   y="{}" />""".format(color, stroke_width, height, x, y))
 
 
 for i, c in enumerate(codes):
