@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 
-codes = []
 
 text = 'Hello, world!'
-for c in text:
-    codes.append('{0:08b}'.format(ord(c)))
 
 margin_left = 0
 margin_top = 0
@@ -13,6 +10,13 @@ radius = 8
 gap = 5
 stroke_width = 3
 color = '#ffffff'
+
+
+def ascii_to_binary(s):
+    codes = []
+    for c in s:
+        codes.append('{0:08b}'.format(ord(c)))
+    return codes
 
 
 def circle(x, y):
@@ -38,7 +42,7 @@ def vertical_stroke(cx, cy):
    y="{}" />""".format(color, stroke_width, height, x, y))
 
 
-for i, c in enumerate(codes):
+for i, c in enumerate(ascii_to_binary(text)):
     for j, d in enumerate(c):
         x = margin_left + gap + radius + j * (gap + 2 * radius)
         y = margin_top + gap + radius + i * (gap + 2 * radius)
